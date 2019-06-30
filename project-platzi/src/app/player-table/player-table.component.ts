@@ -1,4 +1,4 @@
-import { PlayerService } from './../services/player.service';
+import { PlayerService, PlayersTableHeaders } from './../services/player.service';
 import { Component, OnInit } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Player } from '../interfaces/player';
@@ -9,7 +9,8 @@ import { Player } from '../interfaces/player';
   styleUrls: ['./player-table.component.scss']
 })
 export class PlayerTableComponent implements OnInit {
-  public players$: Observable<Player[]>
+  public players$: Observable<Player[]>;
+  public playersTableHeaders = PlayersTableHeaders;
   public selectedPlayer: Player;
   public showModal = false;
 
